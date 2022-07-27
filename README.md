@@ -709,3 +709,4 @@ plt.imshow(im)<br>
 plt.show()<br>
 stat=ImageStat.Stat(im)<br>
 print(stat.stddev)<br>
+![image](https://user-images.githubusercontent.com/99945753/181228277-3cd61944-a900-425a-9422-29b6a36b5ca6.png)<br>
