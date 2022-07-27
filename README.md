@@ -714,8 +714,7 @@ print(stat.stddev)<br>
  
  # Python3 program for printing<br>
 # the rectangular pattern<br>
- 
-# Function to print the pattern<br>
+ # Function to print the pattern<br>
 def printPattern(n):<br>
  
     arraySize = n * 2 - 1;<br>
