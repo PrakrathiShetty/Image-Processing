@@ -667,7 +667,7 @@ for y in range(imgsize[1]):<br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
-![image](https://user-images.githubusercontent.com/97940277/180193871-4cbf9f2c-e5
+![image](https://user-images.githubusercontent.com/97940277/180193871-4cbf9f2c-e5<br>
 
 
 
