@@ -668,3 +668,44 @@ plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/180193871-4cbf9f2c-e5
+
+
+
+#Min<br>
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('bird.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
+print(min_channels)<br>
+
+
+
+#max<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('bird.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+print(max_channels)<br>
+
+#average<br>
+import imageio
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=imageio.imread('bird.jpg')<br>
+plt.imshow(img)<br>
+np.average(img)<br>
+
+#standard deviation<br>
+from PIL import Image,ImageStat<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('bird.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
