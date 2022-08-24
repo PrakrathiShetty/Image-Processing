@@ -70,7 +70,7 @@ print("filename:",image.filename)<br>
 print("mode:",image.mode)<br>
 print("size:",image.size)<br>
 print("width:",image.width)<br>
-print("height:",image.height)
+print("height:",image.height)<br>
 image.close()<br>
 output:<br>
 filename: d1.jpg<br>
