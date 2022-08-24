@@ -736,3 +736,5 @@ edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge D
 cv2.imshow('Canny Edge Detection', edges)<br><br><br>
 cv2.waitKey(0)<br><br><br>
 cv2.destroyAllWindows()<br><br><br>
+
+ ![image](https://user-images.githubusercontent.com/99945753/186401861-5f1e658e-5f1b-4823-bb47-c3fcbd5f2422.png)<br>
