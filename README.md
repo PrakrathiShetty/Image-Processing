@@ -708,3 +708,31 @@ n = 4;<br>
  
 printPattern(n);<br>
 
+edge detection <br>
+ import cv2<br>
+# Read the original image<br>
+img = cv2.imread('f1.jpg')<br>
+# Display original image<br>
+cv2.imshow('Original', img)<br>
+cv2.waitKey(0)<br>
+# Convert to graycsale<br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+# Blur the image for better edge detection<br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
+# Sobel Edge Detection<br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br><br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br><br>
+# Display Sobel Edge Detection Images<br><br>
+cv2.imshow('Sobel X', sobelx)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel Y', sobely)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br><br>
+cv2.waitKey(0)<br><br>
+# Canny Edge Detection<br><br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br><br><br>
+# Display Canny Edge Detection Image<br><br><br>
+cv2.imshow('Canny Edge Detection', edges)<br><br><br>
+cv2.waitKey(0)<br><br><br>
+cv2.destroyAllWindows()<br><br><br>
