@@ -61,7 +61,7 @@ plt.imshow(img)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178717913-670f45ec-46e7-491c-8ce2-87bc66920811.png)<br>
 
-7.write a program to display image attributes<br>
+<b>7.write a program to display image attributes<br>
 from PIL import Image<br>
 image=Image.open('d1.jpg')<br>
 print("filename:",image.filename)<br>
@@ -77,7 +77,7 @@ size: (259, 194)<br>
 width: 259<br>
 height: 194<br>
 
-8.Resize the original image<br>
+<b>8.Resize the original image<br>
 import cv2<br>
 img=cv2.imread('flower1.jpg')<br>
 print('original image length width',img.shape)<br>
@@ -94,7 +94,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178970358-c68f01ef-7e19-48f0-938d-9eb3f7142497.png)<br>
 
 
-9.convert the original to grey scale and then to binary <br>
+<b>9.convert the original to grey scale and then to binary <br>
 import cv2<br>
 img=cv2.imread('flower3.jpg')<br>
 cv2.imshow("RGB",img)<br>
@@ -137,8 +137,6 @@ plt.imshow(img)
 plt.show()<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719442-0e757f29-9c36-431e-bacf-2ed20a326e60.png)<br>
-
-
 hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br><br>
 light_orange=(1,190,200)<br><br>
 dark_orange=(18,255,255)<br><br>
@@ -149,8 +147,6 @@ plt.imshow(mask,cmap="gray")<br><br>
 plt.subplot(1,2,2)<br>
 plt.imshow(result)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719520-ba663976-accd-44b9-b586-ac2a1b255b96.png)<br>
-
-
 light_white=(0,0,200)<br>
 dark_white=(145,60,255)<br>
 mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
@@ -160,12 +156,8 @@ plt.imshow(mask,cmap="gray")<br>
 plt.subplot(1,2,2)<br>
 plt.imshow(result_white)<br>
 plt.show()<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178719893-0010830f-a44d-4211-a790-d41148cbfec3.png)<br>
-
-
 final_mask=mask+mask_white<br>
-
 final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
 plt.subplot(1,2,1)<br>
 plt.imshow(final_mask,cmap="gray")<br>
@@ -178,11 +170,10 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178719967-f39ef39a-b4aa-426c-a437-a026e61044ae.png)<br>
 
 
-3.write a program to perform arithmatic operation on images?<br>
+<b>3.write a program to perform arithmatic operation on images?<br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
-
 #reading image files<br>
 img1=cv2.imread('doll1.jpg')<br>
 img2=cv2.imread('doll2.jpg')<br>
@@ -191,38 +182,29 @@ img2=cv2.imread('doll2.jpg')<br>
 fimg1=img1+img2<br>
 plt.imshow(fimg1)<br>
 plt.show()<br>
-
 #Saving the output image<br>
 cv2.imwrite('output.jpg',fimg1)<br>
 fimg2=img1-img2<br>
 plt.imshow(fimg2)<br>
 plt.show()<br>
-
 #saving the output image<br>
 cv2.imwrite('output.jpg',fimg2)<br>
 fimg3=img1*img2<br>
 plt.imshow(fimg3)<br>
 plt.show()<br><br>
-
 #saving the output image<br>
 cv2.imwrite('output.jpg',fimg3)<br>
 fimg4=img1/img2<br>
 plt.imshow(fimg4)<br>
 plt.show()<br>
-
 #saving the output image<br>
 cv2.imwrite('output.jpg',fimg4)<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178959748-3e3bd558-a612-4234-a9f1-b6c709986966.png)<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178959801-e20b90ea-d197-4c46-8188-17504200b67e.png)<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178959841-f60a3bc6-b162-477e-a117-280479858fee.png)<br>
 
-
-
-4.write a program to image to different color space
-import cv2
+<b>4.write a program to image to different color space
+import cv2<br>
 img=cv2.imread("D:\red.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
@@ -244,8 +226,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178961292-952e8568-cb52-4e98-9209-c8dc787eb673.png)<br>
 
 
-5.program to create an image using 2Darray<br>
-
+<b>5.program to create an image using 2Darray<br>
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
@@ -256,14 +237,12 @@ img=Image.fromarray(array)<br>
 img.save('image1.png')<br>
 img.show()<br><br>
 c.waitKey(0)<br>
-
 ![image](https://user-images.githubusercontent.com/97940277/178961601-9ff2d0c5-c1ed-4cd2-a732-5a7dd4a8d334.png)<br>
 
-6.Image processing using bitwise operator?<br><br>
-
-import cv2<br><br>
+6.Image processing using bitwise operator?<br>
+import cv2<br>
 import matplotlib.pyplot as plt<br>
-image1=cv2.imread('nature.jpg')<br><br>
+image1=cv2.imread('nature.jpg')<br>
 image2=cv2.imread('nature.jpg')<br>
 ax=plt.subplots(figsize=(15,10))<br>
 bitwiseAnd=cv2.bitwise_and (image1,image2)<br>
@@ -282,29 +261,23 @@ plt.imshow(bitwiseNot_img1)<br>
 plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
-
 Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178962555-312d6f92-7ac9-4bde-beea-12a1d6273a26.png)<br>
 
-7.blur image<br>
+<b>7.blur image<br>
 import cv2<br>
-import numpy as np<br><br>
-
+import numpy as np<br>
 image=cv2.imread('img1.jpg')<br>
-
 cv2.imshow('original Image',image)<br>
 cv2.waitKey(0)<br>
-
 #gaussian blur<br>
 Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
 cv2.imshow('Gaussian Blurring',Gaussian)<br>
 cv2.waitKey(0)<br>
-
 #median Blur<br>
 median=cv2.medianBlur(image,5)<br>
 cv2.imshow('Median Blurring',median)<br>
 cv2.waitKey(0)<br>
-
 #Bilateral Blur<br>
 bilateral=cv2.bilateralFilter(image,9,75,75)<br>
 cv2.imshow('Bilateral Blurring',bilateral)<br>
@@ -317,9 +290,7 @@ ouput:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178963707-2aab2b8e-716e-400f-a4c1-b3ce03378f51.png)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178963808-69aff8c8-c3e7-4a8c-b9d2-8b99a26083f9.png)<br>
 
-
-
-8.Image enhancement<br>
+<b>8.Image enhancement<br>
 from PIL import Image <br>
 from PIL import ImageEnhance <br>
 image=Image.open('nature.jpg') <br>
@@ -348,9 +319,7 @@ Output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178965388-049b7efa-f03d-4cc9-b0d8-28873b4cc93e.png)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178965455-0e1fa11d-af59-4fdf-9490-5aae9da7e325.png)<br>
 
-
-
-9.morphological <br>
+<b>9.morphological <br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -377,9 +346,6 @@ cv2.waitKey(0)<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178966916-1772b3bd-5108-42d9-85fe-58dc632188a0.png)<br>
 
-
-
-
 <b>10.Develop a program to
 i)Read the image convert it nto grayscale image<br>
 ii)Write (save) the grayscale image and<br>
@@ -398,7 +364,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/97940277/178967628-d19f0ee9-c6cc-4e40-a89b-44eafef2b393.png)<br>
 ![image](https://user-images.githubusercontent.com/97940277/178967711-f1a39883-2a42-4613-9182-feb487bd373c.png)<br>
 
-11.graylevel slicing with background<br>
+<b>11.graylevel slicing with background<br>
 import cv2<br><br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -417,7 +383,7 @@ plt.imshow(equ,'gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178971021-11356c05-51f6-4643-8018-83e266ab49fd.png)<br>
 
-12.graylevel slicing without background<br>
+<b>12.graylevel slicing without background<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -436,8 +402,7 @@ plt.imshow(equ,'gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940277/178971069-841184c4-6139-42e3-b45a-7aec654a47b8.png)<br>
 
-
-13. import numpy<br>
+<b>13. import numpy<br>
 import numpy as np<br>
 img  = cv2.imread('puppy.jpg',0)<br>
 hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
