@@ -743,4 +743,50 @@ cv2.destroyAllWindows()<br><br><br>
  ![image](https://user-images.githubusercontent.com/99945753/186402416-048cedb6-5cbe-40fc-9014-c3e46eadbfec.png)<br>
 
 
+from PIL import Image,ImageChops,ImageFilter<br>
+from matplotlib import pyplot as plt<br>
+#create PIL a image object<br>
+x=Image.open("x.png")<br>
+o=Image.open("o.png")<br>
+#find out attributes if image objects<br>
+print('size of the image:',x.size,'color mode:',x.mode)<br>
+print('size of the image:',o.size,'color mode:',o.mode)<br>
+#plot 2 imageone besides the other<br>
+plt.subplot(121),plt.imshow(x)
+plt.axis('off')<br>
+plt.subplot(122),plt.imshow(o)<br>
+plt.axis('off')<br>
+#multiply images<br>
+merged=ImageChops.multiply(x,o)<br>
+#adding 2 images<br>
+add=ImageChops.add(x,o)<br>
+#convert color mode <br>
+greyscale=merged.convert('L')<br>
+greyscale<br>
+![image](https://user-images.githubusercontent.com/99945753/186653996-4d0ca11d-560b-4032-8ea1-aea5625600cb.png)<br>
 
+#more attributes<br>
+image=merged<br>
+print('image size:',image.size,<br>
+     '\ncolor mode:',image.mode,<br>
+     '\niamge width:',image.width,'|also represtented by:',image.size[0],<br>
+     '\nimage height:',image.height,'|also represented by:',image.size[1],)<br>
+output:<br>
+image size: (256, 256) <br>
+color mode: RGB <br>
+iamge width: 256 |also represtented by: 256<br> 
+image height: 256 |also represented by: 256<br>
+
+#mapping the pixels of the iamge so we can use them as coordinates<br>
+pixel=greyscale.load()<br>
+#a nested loop to parse through all the pixels in the image<br>
+for row in range(greyscale.size[0]):<br>
+    for column in range(greyscale.size[1]):<br>
+        if pixel[row,column]!=(255):<br>
+            pixel[row,column]=(0)<br>
+greyscale<br> 
+![image](https://user-images.githubusercontent.com/99945753/186654776-0016a7af-704b-4839-99d4-4e77a7923e73.png)<br>
+
+
+
+        
