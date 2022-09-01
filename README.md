@@ -788,5 +788,34 @@ greyscale<br>
 ![image](https://user-images.githubusercontent.com/99945753/186654776-0016a7af-704b-4839-99d4-4e77a7923e73.png)<br>
 
 
+#1.inverted image<br>
+invert=ImageChops.invert(greyscale)<br>
+#2.inverted by substraction<br>
+bg=Image.new('L',(255,256),color=(255))#created a new iamge with a solid white background<br>
+subt=ImageChops.subtract(bg,greyscale)#substract image from bckground<br>
+#3.rotate<br>
+rotate=subt.rotate(45)<br>
+rotate<br>
+![image](https://user-images.githubusercontent.com/99945753/187903767-599387e2-fa4b-4130-a56d-ad613aea1663.png)<br>
+
+#gaussian blur<br>
+blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))<br>
+#edge detection <br>
+edge=blur.filter(ImageFilter.FIND_EDGES)<br>
+edge<br>
+![image](https://user-images.githubusercontent.com/99945753/187903917-4a4c7553-fc77-4b30-80f1-98f3111a1658.png)<br>
+
+#change edge  colors<br>
+edge=edge.convert('RGB')<br>
+bg_red=Image.new('RGB',(255,256),color=(255,0,0))<br>
+filled_edge=ImageChops.darker(bg_red,edge<br>
+filled_edge<br>
+
+![image](https://user-images.githubusercontent.com/99945753/187904086-a331066f-b574-431f-b330-7b06ce3b79f2.png)<br>
+
+#save image in the directory<br>
+edge.save('processed.png')<br>
+
+
 
         
